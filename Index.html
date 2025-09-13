@@ -1,0 +1,283 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anurag Kushwaha — Portfolio</title>
+  <meta name="description" content="Portfolio of Anurag Kushwaha — Aspiring Web Developer">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#4f46e5;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;
+      background:linear-gradient(180deg,#071024 0%, #07112a 60%);color:#e6eef8;line-height:1.5;
+      -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;padding:24px;
+    }
+    .container{max-width:1000px;margin:0 auto}/* NAV */
+header{position:sticky;top:12px;z-index:40}
+nav{display:flex;align-items:center;justify-content:space-between;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:10px 16px;border-radius:12px;backdrop-filter:blur(6px);box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+.brand{display:flex;gap:12px;align-items:center}
+.logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:flex;align-items:center;justify-content:center;font-weight:700;color:white}
+nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600}
+nav a:hover{color:white;background:rgba(255,255,255,0.02)}
+.cta{background:var(--accent);color:white;padding:8px 12px;border-radius:10px}
+
+/* HERO */
+.hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;margin-top:28px}
+.card{background:var(--card);padding:22px;border-radius:var(--radius);box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+.intro h1{margin:0;font-size:28px}
+.tag{color:var(--accent);font-weight:700;margin-top:6px}
+.lead{color:var(--muted);margin-top:10px}
+.actions{margin-top:18px;display:flex;gap:12px}
+.btn{padding:10px 14px;border-radius:10px;border:0;font-weight:700;cursor:pointer}
+.btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.06);color:#dbeafe}
+
+.profile-pic{width:100%;height:360px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));flex-direction:column}
+.avatar{width:160px;height:160px;border-radius:50%;background:linear-gradient(135deg,#7c3aed,#06b6d4);display:flex;align-items:center;justify-content:center;font-size:40px;font-weight:700}
+.muted{color:var(--muted)}
+
+/* SECTIONS */
+section{margin-top:20px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+
+/* Skills */
+.skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.skill{background:var(--glass);padding:8px 10px;border-radius:8px;color:var(--muted);font-weight:600}
+
+/* Projects */
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.project-card{padding:14px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.02)}
+.project-title{font-weight:700;margin:0}
+.project-desc{color:var(--muted);font-size:14px;margin-top:8px}
+.proj-links{margin-top:12px;display:flex;gap:8px}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{display:flex;flex-direction:column;margin-bottom:8px}
+input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:#e6eef8}
+textarea{min-height:120px;resize:vertical}
+.muted-small{color:var(--muted);font-size:14px}
+
+footer{margin-top:30px;text-align:center;color:var(--muted);font-size:14px}
+
+/* Animations */
+.fade-in{opacity:0;transform:translateY(10px);transition:all .6s cubic-bezier(.2,.9,.2,1)}
+.in-view{opacity:1;transform:none}
+
+@media(max-width:880px){
+  .hero{grid-template-columns:1fr;}
+  .profile-pic{height:260px}
+  .contact-grid{grid-template-columns:1fr}
+  .grid-2{grid-template-columns:1fr}
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <nav>
+        <div class="brand">
+          <div class="logo">AK</div>
+          <div>
+            <div style="font-weight:700">Anurag Kushwaha</div>
+            <div style="font-size:12px;color:var(--muted)">BCA Student • Aspiring Web Developer</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:6px;align-items:center">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#resume">Resume</a>
+          <a href="#contact" class="cta">Contact</a>
+        </div>
+      </nav>
+    </header><main>
+  <section id="home" class="hero fade-in">
+    <div class="card intro">
+      <h1>Hello, I'm <span style="color:var(--accent)">Anurag Kushwaha</span></h1>
+      <div class="tag">Aspiring Web Developer • Tech Enthusiast • Problem Solver</div>
+      <p class="lead">BCA 3rd year student at Microtek College of Management and Technology, Varanasi. I build small, useful web tools and projects — focusing on front-end, JavaScript, and Python automation.</p>
+      <div class="skills">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Python</div>
+        <div class="skill">C/C++</div>
+        <div class="skill">Typing — 40 WPM</div>
+      </div>
+
+      <div class="actions">
+        <a class="btn" href="#projects">See Projects</a>
+        <a class="btn btn-outline" id="downloadResume" href="/resume.pdf" download>Download Resume (PDF)</a>
+      </div>
+
+      <div style="margin-top:14px;color:var(--muted);font-size:14px">
+        <strong>Email:</strong> kushwahapiyush567@gmail.com • <strong>Phone:</strong> 9336726460
+      </div>
+    </div>
+
+    <aside class="profile-pic card">
+      <div class="avatar">AK</div>
+      <div style="margin-top:12px;text-align:center">
+        <div style="font-weight:700">Anurag Kushwaha</div>
+        <div class="muted" style="font-size:14px">BCA, Microtek College • Ghazipur</div>
+      </div>
+    </aside>
+  </section>
+
+  <section id="about" class="fade-in card" style="margin-top:22px;padding:20px">
+    <h2>About Me</h2>
+    <p class="muted">I'm a proactive BCA student with hands-on projects in web development and automation. My career objective is to gain hands-on experience in web development and contribute to impactful real-world projects.</p>
+    <div class="grid-2" style="margin-top:14px">
+      <div>
+        <h3>Education</h3>
+        <p class="muted">Microtek College of Management and Technology — BCA (3rd year)</p>
+
+        <h3 style="margin-top:12px">Skills & Tools</h3>
+        <div class="skills">
+          <div class="skill">HTML</div>
+          <div class="skill">CSS</div>
+          <div class="skill">JavaScript</div>
+          <div class="skill">Python</div>
+          <div class="skill">Git</div>
+        </div>
+      </div>
+      <div>
+        <h3>Career Objective</h3>
+        <p class="muted">To gain hands-on experience in web development and contribute to impactful real-world projects while expanding my skills in full-stack development.</p>
+
+        <h3 style="margin-top:12px">Notable Projects</h3>
+        <ul class="muted-small">
+          <li>Voice Controlled Programming Assistant</li>
+          <li>Expense Tracker (Java)</li>
+          <li>Face Recognition Based Attendance System</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" style="margin-top:22px">
+    <h2>Projects</h2>
+    <div class="projects">
+      <article class="project-card fade-in">
+        <h4 class="project-title">Voice Controlled Programming Assistant</h4>
+        <p class="project-desc">A tool to control code editor actions and run snippets using voice commands. Built using JavaScript and speech recognition APIs.</p>
+        <div class="proj-links">
+          <a class="btn btn-outline" href="#">View Code</a>
+          <a class="btn" href="#">Live Demo</a>
+        </div>
+      </article>
+
+      <article class="project-card fade-in">
+        <h4 class="project-title">Expense Tracker (Java)</h4>
+        <p class="project-desc">A desktop application to track income/expenses, categorize transactions, and generate monthly summaries.</p>
+        <div class="proj-links">
+          <a class="btn btn-outline" href="#">Source</a>
+        </div>
+      </article>
+
+      <article class="project-card fade-in">
+        <h4 class="project-title">Face Recognition Attendance</h4>
+        <p class="project-desc">An attendance system using face recognition to automate daily attendance marking. Uses Python + OpenCV.</p>
+        <div class="proj-links">
+          <a class="btn btn-outline" href="#">Repository</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="resume" class="fade-in card" style="margin-top:22px;padding:20px;text-align:center">
+    <h2>Resume</h2>
+    <p class="muted">Click below to download my resume. Replace <code>/resume.pdf</code> with your actual resume file path.</p>
+    <div style="margin-top:12px">
+      <a class="btn" href="/resume.pdf" download>Download Resume (PDF)</a>
+    </div>
+  </section>
+
+  <section id="contact" style="margin-top:22px">
+    <h2>Contact</h2>
+    <div class="card contact-grid">
+      <div>
+        <h4>Get in touch</h4>
+        <p class="muted-small">Email: kushwahapiyush567@gmail.com<br>Phone: 9336726460<br>Location: Ghazipur, Uttar Pradesh</p>
+        <div style="margin-top:12px">
+          <a class="btn btn-outline" href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+
+      <div>
+        <form id="contactForm">
+          <div class="field">
+            <label class="muted-small">Your name</label>
+            <input type="text" id="name" placeholder="Your name" required>
+          </div>
+          <div class="field">
+            <label class="muted-small">Email</label>
+            <input type="email" id="email" placeholder="you@example.com" required>
+          </div>
+          <div class="field">
+            <label class="muted-small">Message</label>
+            <textarea id="message" placeholder="Write a short message" required></textarea>
+          </div>
+          <div style="text-align:right"><button class="btn" type="submit">Send</button></div>
+        </form>
+        <div id="formMsg" class="muted-small" style="margin-top:8px"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Anurag Kushwaha — Built with ❤️
+  </footer>
+</main>
+
+  </div>  <script>
+    // basic interactivity: year, smooth scroll, form handling, reveal on scroll
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // smooth scroll for nav links
+    document.querySelectorAll('nav a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        const t = document.querySelector(a.getAttribute('href'));
+        if(t) t.scrollIntoView({behavior:'smooth',block:'start'});
+      });
+    });
+
+    // simple contact form behaviour (no backend) -> shows success message and resets
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if(!name||!email||!message){
+        document.getElementById('formMsg').textContent = 'Please fill all fields.';
+        return;
+      }
+      document.getElementById('formMsg').textContent = 'Thank you! Your message was recorded (local demo).';
+      this.reset();
+    });
+
+    // reveal on scroll
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(en=>{ if(en.isIntersecting) en.target.classList.add('in-view'); });
+    },{threshold:0.12});
+    document.querySelectorAll('.fade-in').forEach(el=>io.observe(el));
+
+    // replace placeholder resume links instruction
+    // NOTE: to make resume download work, place resume.pdf at the server root or update the hrefs to your file path
+  </script></body>
+</html>
